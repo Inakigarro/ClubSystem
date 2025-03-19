@@ -1,0 +1,5 @@
+# dotnet
+dotnet/.vs
+
+[Bb]in/
+[Oo]bj/
