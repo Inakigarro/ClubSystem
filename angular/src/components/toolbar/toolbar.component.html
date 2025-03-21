@@ -1,0 +1,24 @@
+<mat-toolbar>
+	@if (this.mainButton) {
+	<ig-button
+		[label]="this.mainButton.label"
+		[icon]="this.mainButton.icon"
+		[type]="this.mainButton.type"
+		[kind]="this.mainButton.kind"
+	/>
+	} @if (this.title) { @if (this.title.isMain) {
+	<h1>{{ this.title.title }}</h1>
+	} @else {
+	<span>{{ this.title.title }}</span>
+	} }
+	<span class="title-spacer"></span>
+	@if (this.secondaryButtons.length > 0) { @for (button of
+	this.secondaryButtons; track $index) {
+	<ig-button
+		[label]="button.label"
+		[icon]="button.icon"
+		[type]="button.type"
+		[kind]="button.kind"
+	/>
+	} }
+</mat-toolbar>

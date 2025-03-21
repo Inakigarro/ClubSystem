@@ -1,0 +1,47 @@
+@switch (this.kind) { @case('flat') {
+<button
+	mat-flat-button
+	[type]="this.type"
+	[disabled]="this.disabled"
+>
+	@if (this.icon) {
+	<mat-icon>{{ this.icon }}</mat-icon>
+	} @if (this.label) {
+	<span>{{ this.label }}</span>
+	}
+</button>
+} @case('raised') {
+<button
+	mat-raised-button
+	[type]="this.type"
+	[disabled]="this.disabled"
+>
+	@if (this.icon) {
+	<mat-icon>{{ this.icon }}</mat-icon>
+	} @if (this.label) {
+	<span>{{ this.label }}</span>
+	}
+</button>
+} @case('icon') {
+<button
+	mat-icon-button
+	[type]="this.type"
+	[disabled]="this.disabled"
+>
+	@if (this.icon) {
+	<mat-icon>{{ this.icon }}</mat-icon>
+	}
+</button>
+} @default {
+<button
+	mat-button
+	[type]="this.type"
+	[disabled]="this.disabled"
+>
+	@if (this.icon) {
+	<mat-icon>{{ this.icon }}</mat-icon>
+	} @if (this.label) {
+	<span>{{ this.label }}</span>
+	}
+</button>
+} }

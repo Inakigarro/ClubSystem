@@ -1,6 +1,6 @@
-﻿namespace IG.ClubSystem.Domain.Entities;
+﻿namespace IG.ClubSystem.Contracts.Members;
 
-public class Member: IId
+public record MemberDto
 {
     public Guid Id { get; set; } = Guid.NewGuid();
     public int MemberId { get; set; }
