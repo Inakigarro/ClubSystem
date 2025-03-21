@@ -4,10 +4,11 @@ import { ToolbarComponent } from "@components/toolbar/toolbar.component";
 import { DrawerComponent } from "@components/drawer/drawer.component";
 import { Button } from "@components/shared/button.model";
 import { ButtonComponent } from "@components/button/button.component";
+import {ShellComponent} from '../shell/shell.component';
 
 @Component({
 	selector: "app-root",
-	imports: [ToolbarComponent, DrawerComponent, ButtonComponent],
+	imports: [ShellComponent],
 	templateUrl: "./app.component.html",
 	styleUrl: "./app.component.scss",
 })

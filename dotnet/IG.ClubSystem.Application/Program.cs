@@ -18,6 +18,7 @@ public class Program
             opts.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
                     assembly => assembly.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
         
+        builder.Services.AddLogging();
         // Repositories.
         builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         builder.Services.AddScoped<IMembersRepository, MembersRepository>();

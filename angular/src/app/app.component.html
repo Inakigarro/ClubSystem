@@ -1,26 +1,3 @@
-<ig-toolbar
-	class="toolbar"
-	[mainButton]="this.toolbar.mainButton"
-	[title]="this.toolbar.toolbarTitle"
-	[secondaryButtons]="this.toolbar.secondaryButtons"
-/>
-<ig-drawer class="main">
-	<div
-		side
-		class="sidenav"
-	>
-		@for (button of this.sidenavButtons; track $index) {
-		<ig-button
-			[label]="button.label"
-			[icon]="button.icon"
-			[type]="button.type"
-			[kind]="button.kind"
-		/>}
-	</div>
-	<div
-		content
-		class="content"
-	>
-		content
-	</div>
-</ig-drawer>
+<ig-shell [toolbar]="this.toolbar" [sidenavButtons]="this.sidenavButtons">
+  Sarasa
+</ig-shell>

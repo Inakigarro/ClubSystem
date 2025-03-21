@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 namespace IG.ClubSystem.Persistence.Services;
 
 public class MembersService(
-	Logger<MembersService> logger,
+	ILogger<MembersService> logger,
 	IMembersRepository repository): IMembersService
 {
     public async Task<MemberDto> AddAsync(CreateMemberDto member, CancellationToken cancellationToken)
