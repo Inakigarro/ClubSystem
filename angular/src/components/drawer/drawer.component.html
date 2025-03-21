@@ -1,0 +1,12 @@
+<mat-drawer-container class="drawer-container">
+	<mat-drawer
+		[mode]="this.mode"
+		[position]="this.position"
+		[opened]="this.opened"
+	>
+		<ng-content select="[side]"></ng-content>
+	</mat-drawer>
+	<mat-drawer-content>
+		<ng-content select="[content]"></ng-content>
+	</mat-drawer-content>
+</mat-drawer-container>

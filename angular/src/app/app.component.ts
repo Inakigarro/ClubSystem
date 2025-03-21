@@ -1,10 +1,13 @@
 import { Component } from "@angular/core";
 import { Toolbar } from "@components/shared/toolbar.model";
 import { ToolbarComponent } from "@components/toolbar/toolbar.component";
+import { DrawerComponent } from "@components/drawer/drawer.component";
+import { Button } from "@components/shared/button.model";
+import { ButtonComponent } from "@components/button/button.component";
 
 @Component({
 	selector: "app-root",
-	imports: [ToolbarComponent],
+	imports: [ToolbarComponent, DrawerComponent, ButtonComponent],
 	templateUrl: "./app.component.html",
 	styleUrl: "./app.component.scss",
 })
@@ -29,4 +32,13 @@ export class AppComponent {
 			},
 		],
 	};
+
+	protected sidenavButtons: Button[] = [
+		{
+			label: "Members",
+			icon: "",
+			type: "button",
+			kind: "raised",
+		},
+	];
 }

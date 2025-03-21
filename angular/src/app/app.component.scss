@@ -1,0 +1,23 @@
+.toolbar {
+    display: block;
+    height: 15%;
+}
+
+.main {
+    display: block;
+    height: 85%;
+}
+
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
