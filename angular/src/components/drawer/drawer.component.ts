@@ -14,5 +14,5 @@ export class DrawerComponent {
 	@Input()
 	public mode: "over" | "push" | "side" = "side";
 	@Input()
-	public opened: boolean = true;
+	public opened: boolean | null = true;
 }

@@ -1,10 +1,11 @@
 <mat-toolbar>
 	@if (this.mainButton) {
-	<ig-button
+	<ig-action-button
 		[label]="this.mainButton.label"
 		[icon]="this.mainButton.icon"
 		[type]="this.mainButton.type"
 		[kind]="this.mainButton.kind"
+    [action]="this.mainButton.action"
 	/>
 	} @if (this.title) { @if (this.title.isMain) {
 	<h1>{{ this.title.title }}</h1>

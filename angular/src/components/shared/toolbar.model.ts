@@ -1,7 +1,7 @@
-import { Button } from "./button.model";
+import { ActionButton, Button } from "./button.model";
 
 export interface Toolbar {
-	mainButton: Button;
+	mainButton: ActionButton;
 	toolbarTitle: ToolbarTitle;
 	secondaryButtons: Button[];
 }

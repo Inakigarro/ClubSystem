@@ -1,3 +1,8 @@
+import {Action} from '@ngrx/store';
+
+export type ButtonType = "button" | "submit" | "reset";
+export type ButtonKind = "default" | "flat" | "raised" | "icon";
+
 export interface Button {
 	label: string;
 	icon: string;
@@ -5,5 +10,6 @@ export interface Button {
 	kind: ButtonKind;
 }
 
-export type ButtonType = "button" | "submit" | "reset";
-export type ButtonKind = "default" | "flat" | "raised" | "icon";
+export interface ActionButton extends Button {
+  action: Action;
+}

@@ -3,7 +3,7 @@
 	[secondaryButtons]="toolbar?.secondaryButtons ?? []"
 	[title]="toolbar?.toolbarTitle"
 />
-<ig-drawer class="main">
+<ig-drawer class="main" [opened]="this.opened | async">
 	<div
 		side
 		class="sidenav"

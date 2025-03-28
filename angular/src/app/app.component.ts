@@ -3,6 +3,7 @@ import { Toolbar } from "@components/shared/toolbar.model";
 import { Button } from "@components/shared/button.model";
 import { ShellComponent } from "../shell/shell.component";
 import { RouterOutlet } from "@angular/router";
+import {menuButtonClicked} from '@app/app.actions';
 
 @Component({
 	selector: "app-root",
@@ -17,6 +18,7 @@ export class AppComponent {
 			label: "",
 			type: "button",
 			kind: "icon",
+      action: menuButtonClicked,
 		},
 		toolbarTitle: {
 			isMain: true,

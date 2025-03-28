@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { ButtonKind, ButtonType } from "../shared/button.model";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
@@ -25,4 +25,7 @@ export class ButtonComponent {
 
 	@Input()
 	public disabled: boolean = false;
+
+  @Output()
+  public onClick: EventEmitter<any> = new EventEmitter();
 }
