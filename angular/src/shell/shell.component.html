@@ -1,26 +1,25 @@
 <ig-toolbar
-  [mainButton]="toolbar?.mainButton"
-  [secondaryButtons]="toolbar?.secondaryButtons ?? []"
-  [title]="toolbar?.toolbarTitle"/>
+	[mainButton]="toolbar?.mainButton"
+	[secondaryButtons]="toolbar?.secondaryButtons ?? []"
+	[title]="toolbar?.toolbarTitle"
+/>
 <ig-drawer class="main">
-  <div
-    side
-    class="sidenav"
-  >
-    @for (button of this.sidenavButtons; track $index) {
-      <ig-button
-        [label]="button.label"
-        [icon]="button.icon"
-        [type]="button.type"
-        [kind]="button.kind"
-      />}
-  </div>
-  <div
-    content
-    class="content"
-  >
-    <ng-content>
-      <router-outlet />
-    </ng-content>
-  </div>
+	<div
+		side
+		class="sidenav"
+	>
+		@for (button of this.sidenavButtons; track $index) {
+		<ig-button
+			[label]="button.label"
+			[icon]="button.icon"
+			[type]="button.type"
+			[kind]="button.kind"
+		/>}
+	</div>
+	<div
+		content
+		class="content"
+	>
+		<ng-content> </ng-content>
+	</div>
 </ig-drawer>

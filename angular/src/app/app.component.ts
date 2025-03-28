@@ -1,14 +1,12 @@
 import { Component } from "@angular/core";
 import { Toolbar } from "@components/shared/toolbar.model";
-import { ToolbarComponent } from "@components/toolbar/toolbar.component";
-import { DrawerComponent } from "@components/drawer/drawer.component";
 import { Button } from "@components/shared/button.model";
-import { ButtonComponent } from "@components/button/button.component";
-import {ShellComponent} from '../shell/shell.component';
+import { ShellComponent } from "../shell/shell.component";
+import { RouterOutlet } from "@angular/router";
 
 @Component({
 	selector: "app-root",
-	imports: [ShellComponent],
+	imports: [ShellComponent, RouterOutlet],
 	templateUrl: "./app.component.html",
 	styleUrl: "./app.component.scss",
 })
